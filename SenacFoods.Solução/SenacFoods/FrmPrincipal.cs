@@ -16,5 +16,42 @@ namespace SenacFoods
         {
             InitializeComponent();
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+            var FrmLogin = new FrmLogin();
+            FrmLogin.Show();
+        }
+
+        private void btnCARDAPIO_Click(object sender, EventArgs e)
+        {
+
+            var FrmCardapio = new FrmCardapio();
+            FrmCardapio.ShowDialog();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnUSUARIOS_Click(object sender, EventArgs e)
+        {
+            var FrmUsuario = new FrmUsuario();
+            FrmUsuario.ShowDialog();
+        }
+
+        private void btnCOMANDA_Click(object sender, EventArgs e)
+        {
+            var FrmComanda = new FrnComanda();
+            FrmComanda.ShowDialog();
+        }
+
+        private void btnPEDIDO_Click(object sender, EventArgs e)
+        {
+            var FrmPedidoCozinha = new FrmPedidoCozinha();
+            FrmPedidoCozinha.ShowDialog();
+        }
     }
 }

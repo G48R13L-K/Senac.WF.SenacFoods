@@ -31,6 +31,7 @@
             label1 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            btnFechar = new Button();
             btnENTRADA = new Button();
             txtLOGIN = new TextBox();
             txtSENHA = new TextBox();
@@ -60,6 +61,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnENTRADA);
             panel2.Controls.Add(txtLOGIN);
             panel2.Controls.Add(txtSENHA);
@@ -70,6 +72,21 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(652, 594);
             panel2.TabIndex = 2;
+            // 
+            // btnFechar
+            // 
+            btnFechar.BackColor = Color.Black;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.ForeColor = Color.White;
+            btnFechar.Location = new Point(579, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(61, 45);
+            btnFechar.TabIndex = 3;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // btnENTRADA
             // 
@@ -82,9 +99,10 @@
             btnENTRADA.Location = new Point(69, 391);
             btnENTRADA.Name = "btnENTRADA";
             btnENTRADA.Size = new Size(501, 51);
-            btnENTRADA.TabIndex = 3;
+            btnENTRADA.TabIndex = 0;
             btnENTRADA.Text = "ENTRAR";
             btnENTRADA.UseVisualStyleBackColor = true;
+            btnENTRADA.Click += btnENTRADA_Click;
             // 
             // txtLOGIN
             // 
@@ -95,8 +113,10 @@
             txtLOGIN.Location = new Point(69, 186);
             txtLOGIN.Name = "txtLOGIN";
             txtLOGIN.Size = new Size(502, 28);
-            txtLOGIN.TabIndex = 0;
+            txtLOGIN.TabIndex = 1;
             txtLOGIN.Text = "USUÁRIO";
+            txtLOGIN.Enter += txtLOGIN_Enter;
+            txtLOGIN.Leave += txtLOGIN_Leave;
             // 
             // txtSENHA
             // 
@@ -109,6 +129,8 @@
             txtSENHA.Size = new Size(502, 28);
             txtSENHA.TabIndex = 1;
             txtSENHA.Text = "SENHA";
+            txtSENHA.Enter += txtSENHA_Enter;
+            txtSENHA.Leave += txtSENHA_Leave;
             // 
             // label3
             // 
@@ -132,7 +154,7 @@
             label2.TabIndex = 2;
             label2.Text = "__________________________________________";
             // 
-            // FormLogin
+            // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -141,7 +163,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormLogin";
+            Name = "FrmLogin";
             Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLogin";
@@ -162,5 +184,6 @@
         private Label label2;
         private Label label3;
         private Button btnENTRADA;
+        private Button btnFechar;
     }
 }
