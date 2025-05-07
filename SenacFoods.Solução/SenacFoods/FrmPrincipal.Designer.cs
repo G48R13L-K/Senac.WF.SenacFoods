@@ -35,6 +35,7 @@
             btnCARDAPIO = new Button();
             btnFechar = new Button();
             btnMinimizar = new Button();
+            lblMensagem = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -142,12 +143,24 @@
             btnMinimizar.UseVisualStyleBackColor = false;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
+            // lblMensagem
+            // 
+            lblMensagem.AutoSize = true;
+            lblMensagem.Font = new Font("MV Boli", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMensagem.ForeColor = Color.White;
+            lblMensagem.Location = new Point(401, 92);
+            lblMensagem.Name = "lblMensagem";
+            lblMensagem.Size = new Size(178, 37);
+            lblMensagem.TabIndex = 2;
+            lblMensagem.Text = "lblMensagem";
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(978, 594);
+            Controls.Add(lblMensagem);
             Controls.Add(btnMinimizar);
             Controls.Add(btnFechar);
             Controls.Add(groupBox1);
@@ -157,6 +170,7 @@
             Text = "FrmPrincipal";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -168,5 +182,6 @@
         private Button btnCOMANDA;
         private Button btnFechar;
         private Button btnMinimizar;
+        private Label lblMensagem;
     }
 }

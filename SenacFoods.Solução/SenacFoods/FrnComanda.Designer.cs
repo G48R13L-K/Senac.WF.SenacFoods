@@ -66,6 +66,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrnComanda";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrnComanda";
             panel1.ResumeLayout(false);
             ResumeLayout(false);

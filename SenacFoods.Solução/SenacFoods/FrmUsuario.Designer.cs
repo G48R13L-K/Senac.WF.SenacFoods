@@ -67,6 +67,7 @@
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmUsuario";
             panel1.ResumeLayout(false);
             ResumeLayout(false);

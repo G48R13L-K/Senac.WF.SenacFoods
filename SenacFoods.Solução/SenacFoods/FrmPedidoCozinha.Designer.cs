@@ -66,6 +66,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPedidoCozinha";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPedidoCozinha";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
