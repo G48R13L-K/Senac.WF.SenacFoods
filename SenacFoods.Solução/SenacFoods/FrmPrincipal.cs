@@ -38,10 +38,7 @@ namespace SenacFoods
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnUSUARIOS_Click(object sender, EventArgs e)
-        {
-            var FrmUsuario = new FrmUsuario();
-            FrmUsuario.ShowDialog();
+       
         }
 
         private void btnCOMANDA_Click(object sender, EventArgs e)

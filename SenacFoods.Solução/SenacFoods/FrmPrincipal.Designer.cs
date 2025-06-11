@@ -66,7 +66,6 @@
             btnUSUARIOS.TabIndex = 0;
             btnUSUARIOS.Text = "Usuários";
             btnUSUARIOS.UseVisualStyleBackColor = false;
-            btnUSUARIOS.Click += btnUSUARIOS_Click;
             // 
             // btnPEDIDO
             // 
