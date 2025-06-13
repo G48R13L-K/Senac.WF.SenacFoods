@@ -5,17 +5,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SenacFoods;
 
-public class Usuario
+public class ComandaItem
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    public string Nome { get; set; }
-
-    public string Email { get; set; }
-
-    public string Senha { get; set; }
-
-    public bool Ativo {  get; set; }
+    public int CardapioItem { get; set; }
+     
+    public int ComandaId { get; set; }
 }

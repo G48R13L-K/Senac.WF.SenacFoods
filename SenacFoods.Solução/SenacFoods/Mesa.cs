@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace SenacFoods
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace SenacFoods;
+
+public class Mesa
 {
-    public class Mesa
-    {
-        public int Id { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
 
-        public int NumeroMesa { get; set; }
+    public int NumeroMesa { get; set; }
 
-        public int SituacaoMesa { get; set; }
+    public int SituacaoMesa { get; set; }
 
-    }
 }

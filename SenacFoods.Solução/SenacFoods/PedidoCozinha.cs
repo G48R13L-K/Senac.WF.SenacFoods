@@ -1,21 +1,16 @@
 ﻿
-
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SenacFoods;
 
-public class Usuario
+public class PedidoCozinha
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    public string Nome { get; set; }
+    public int ComandaId { get; set; }
 
-    public string Email { get; set; }
-
-    public string Senha { get; set; }
-
-    public bool Ativo {  get; set; }
+    public int SituacaoId { get; set; }
 }
