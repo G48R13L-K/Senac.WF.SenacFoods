@@ -24,7 +24,7 @@ namespace SenacFoods
             //Conecta no banco
             using(var banco = new ComandaDBContest())
             {   //CONSULTA A TABELA USUARIO
-                var usuario = banco.Usuarios.FirstOrDefault(u => u.Email == nome && u.Senha == senha);
+                var usuario = banco.Usuarios.FirstOrDefault(u => u.Email == nome.ToLower() && u.Senha == senha);
                 
                 if (usuario is not null) 
                 usuarioValido = true;
