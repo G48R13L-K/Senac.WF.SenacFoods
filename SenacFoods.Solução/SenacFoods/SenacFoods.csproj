@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="FrnCardapioCad.cs">
+    <Compile Update="FrmCardapioCad.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

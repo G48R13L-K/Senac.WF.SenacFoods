@@ -1,7 +1,7 @@
 ﻿
 namespace SenacFoods
 {
-    partial class FrnCardapioCad    {
+    partial class FrmCardapioCad    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -53,7 +53,7 @@ namespace SenacFoods
             btnFechar.Location = new Point(744, 9);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(48, 40);
-            btnFechar.TabIndex = 6;
+            btnFechar.TabIndex = 7;
             btnFechar.Text = "X";
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click_1;
@@ -88,7 +88,7 @@ namespace SenacFoods
             btnCancelar.Location = new Point(537, 340);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(125, 40);
-            btnCancelar.TabIndex = 15;
+            btnCancelar.TabIndex = 6;
             btnCancelar.Text = "X Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -102,7 +102,7 @@ namespace SenacFoods
             btnSalvar.Location = new Point(668, 340);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(125, 40);
-            btnSalvar.TabIndex = 9;
+            btnSalvar.TabIndex = 5;
             btnSalvar.Text = "# Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
@@ -112,7 +112,7 @@ namespace SenacFoods
             txtDescricao.Location = new Point(23, 141);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(557, 86);
-            txtDescricao.TabIndex = 14;
+            txtDescricao.TabIndex = 2;
             txtDescricao.Text = "";
             // 
             // chkPossuiPreparo
@@ -121,7 +121,7 @@ namespace SenacFoods
             chkPossuiPreparo.Location = new Point(23, 308);
             chkPossuiPreparo.Name = "chkPossuiPreparo";
             chkPossuiPreparo.Size = new Size(163, 29);
-            chkPossuiPreparo.TabIndex = 13;
+            chkPossuiPreparo.TabIndex = 4;
             chkPossuiPreparo.Text = "Possui Preparo?";
             chkPossuiPreparo.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +139,7 @@ namespace SenacFoods
             txtPreco.Location = new Point(23, 258);
             txtPreco.Name = "txtPreco";
             txtPreco.Size = new Size(163, 31);
-            txtPreco.TabIndex = 11;
+            txtPreco.TabIndex = 3;
             // 
             // label2
             // 
@@ -164,7 +164,7 @@ namespace SenacFoods
             txtTitulo.Location = new Point(23, 68);
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(557, 31);
-            txtTitulo.TabIndex = 8;
+            txtTitulo.TabIndex = 1;
             // 
             // label4
             // 
@@ -173,10 +173,10 @@ namespace SenacFoods
             label4.Location = new Point(12, 14);
             label4.Name = "label4";
             label4.Size = new Size(243, 32);
-            label4.TabIndex = 8;
+            label4.TabIndex = 0;
             label4.Text = "Cadastro de Cardápio";
             // 
-            // FrnCardapioCad
+            // FrmCardapioCad
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -186,7 +186,7 @@ namespace SenacFoods
             Controls.Add(Cardapio);
             Controls.Add(btnFechar);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FrnCardapioCad";
+            Name = "FrmCardapioCad";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrnComanda";
             Cardapio.ResumeLayout(false);
@@ -200,10 +200,7 @@ namespace SenacFoods
             throw new NotImplementedException();
         }
 
-        private void SuspendLayout()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         #endregion
 

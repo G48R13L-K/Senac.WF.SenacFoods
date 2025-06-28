@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SenacFoods
 {
-    public partial class FrnCardapioCad : Form
+    public partial class FrmCardapioCad : Form
     {
-        public FrnCardapioCad()
+        public FrmCardapioCad()
         {
             InitializeComponent();
         }
@@ -52,7 +52,10 @@ namespace SenacFoods
                 
                 //salva as alterações
                 banco.SaveChanges();
-        } 
+        }
+            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

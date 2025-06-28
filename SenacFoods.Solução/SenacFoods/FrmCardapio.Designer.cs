@@ -36,6 +36,7 @@
             textBox1 = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            btnMaisItems = new Button();
             dataGridView1 = new DataGridView();
             Editar = new Button();
             Excluir = new Button();
@@ -51,10 +52,10 @@
             btnFechar.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
             btnFechar.FlatStyle = FlatStyle.Flat;
             btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(725, 3);
+            btnFechar.Location = new Point(901, 3);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(48, 40);
-            btnFechar.TabIndex = 2;
+            btnFechar.TabIndex = 4;
             btnFechar.Text = "X";
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
@@ -66,17 +67,17 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(btnFechar);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(14, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(776, 426);
+            panel1.Size = new Size(952, 570);
             panel1.TabIndex = 3;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(150, 36);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(557, 31);
-            textBox1.TabIndex = 5;
+            textBox1.Size = new Size(745, 31);
+            textBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -91,16 +92,31 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnMaisItems);
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Controls.Add(Editar);
             groupBox1.Controls.Add(Excluir);
             groupBox1.ForeColor = SystemColors.Control;
             groupBox1.Location = new Point(3, 84);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(770, 339);
+            groupBox1.Size = new Size(946, 486);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardápio";
+            // 
+            // btnMaisItems
+            // 
+            btnMaisItems.BackColor = Color.DarkGreen;
+            btnMaisItems.FlatAppearance.BorderSize = 0;
+            btnMaisItems.FlatStyle = FlatStyle.Flat;
+            btnMaisItems.ForeColor = SystemColors.ActiveCaptionText;
+            btnMaisItems.Location = new Point(23, 31);
+            btnMaisItems.Name = "btnMaisItems";
+            btnMaisItems.Size = new Size(118, 39);
+            btnMaisItems.TabIndex = 1;
+            btnMaisItems.Text = "+ Item";
+            btnMaisItems.UseVisualStyleBackColor = false;
+            btnMaisItems.Click += btnMaisItems_Click;
             // 
             // dataGridView1
             // 
@@ -121,55 +137,57 @@
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.Gray;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
             dataGridViewCellStyle3.NullValue = null;
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.Location = new Point(23, 45);
+            dataGridView1.Location = new Point(23, 76);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(728, 236);
+            dataGridView1.Size = new Size(906, 348);
             dataGridView1.TabIndex = 3;
             // 
             // Editar
             // 
+            Editar.BackColor = Color.YellowGreen;
             Editar.FlatAppearance.BorderSize = 0;
             Editar.FlatStyle = FlatStyle.Flat;
-            Editar.ForeColor = SystemColors.Control;
-            Editar.Location = new Point(633, 287);
+            Editar.ForeColor = SystemColors.ActiveCaptionText;
+            Editar.Location = new Point(811, 430);
             Editar.Name = "Editar";
             Editar.Size = new Size(118, 39);
-            Editar.TabIndex = 2;
+            Editar.TabIndex = 3;
             Editar.Text = "# Editar";
-            Editar.UseVisualStyleBackColor = true;
+            Editar.UseVisualStyleBackColor = false;
             // 
             // Excluir
             // 
+            Excluir.BackColor = Color.DarkRed;
             Excluir.FlatAppearance.BorderSize = 0;
             Excluir.FlatStyle = FlatStyle.Flat;
-            Excluir.ForeColor = SystemColors.Control;
-            Excluir.Location = new Point(503, 287);
+            Excluir.ForeColor = Color.Black;
+            Excluir.Location = new Point(687, 430);
             Excluir.Name = "Excluir";
             Excluir.Size = new Size(118, 39);
-            Excluir.TabIndex = 1;
+            Excluir.TabIndex = 2;
             Excluir.Text = "X Excluir";
-            Excluir.UseVisualStyleBackColor = true;
+            Excluir.UseVisualStyleBackColor = false;
             // 
             // FrmCardapio
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SandyBrown;
-            ClientSize = new Size(802, 450);
+            ClientSize = new Size(978, 594);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
@@ -194,5 +212,6 @@
         private Button Excluir;
         private TextBox textBox1;
         private DataGridView dataGridView1;
+        private Button btnMaisItems;
     }
 }

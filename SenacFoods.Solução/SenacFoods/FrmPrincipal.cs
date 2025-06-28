@@ -16,7 +16,7 @@ namespace SenacFoods
         {
             InitializeComponent();
             //exibe nome do usuario
-            lblMensagem.Text = "Bem vindo "+nome;
+            lblMensagem.Text = "Bem vindo " + nome;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -38,8 +38,8 @@ namespace SenacFoods
             WindowState = FormWindowState.Minimized;
         }
 
-       
-        
+
+
 
         private void btnCOMANDA_Click(object sender, EventArgs e)
         {
@@ -52,5 +52,7 @@ namespace SenacFoods
             var FrmPedidoCozinha = new FrmPedidoCozinha();
             FrmPedidoCozinha.ShowDialog();
         }
+
+       
     }
 }

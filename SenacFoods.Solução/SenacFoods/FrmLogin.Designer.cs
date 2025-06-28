@@ -83,7 +83,7 @@
             btnFechar.Location = new Point(579, 12);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(61, 45);
-            btnFechar.TabIndex = 3;
+            btnFechar.TabIndex = 0;
             btnFechar.Text = "X";
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
@@ -99,7 +99,7 @@
             btnENTRADA.Location = new Point(69, 391);
             btnENTRADA.Name = "btnENTRADA";
             btnENTRADA.Size = new Size(501, 51);
-            btnENTRADA.TabIndex = 0;
+            btnENTRADA.TabIndex = 3;
             btnENTRADA.Text = "ENTRAR";
             btnENTRADA.UseVisualStyleBackColor = true;
             btnENTRADA.Click += btnENTRADA_Click;
@@ -127,7 +127,7 @@
             txtSENHA.Location = new Point(69, 282);
             txtSENHA.Name = "txtSENHA";
             txtSENHA.Size = new Size(502, 28);
-            txtSENHA.TabIndex = 1;
+            txtSENHA.TabIndex = 2;
             txtSENHA.Text = "SENHA";
             txtSENHA.Enter += txtSENHA_Enter;
             txtSENHA.Leave += txtSENHA_Leave;
