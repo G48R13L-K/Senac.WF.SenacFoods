@@ -115,6 +115,7 @@
             txtLOGIN.Size = new Size(502, 28);
             txtLOGIN.TabIndex = 1;
             txtLOGIN.Text = "USUÁRIO";
+            txtLOGIN.TextChanged += txtLOGIN_TextChanged;
             txtLOGIN.Enter += txtLOGIN_Enter;
             txtLOGIN.Leave += txtLOGIN_Leave;
             // 

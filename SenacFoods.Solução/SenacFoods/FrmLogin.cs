@@ -19,18 +19,18 @@ namespace SenacFoods
         }
 
         private bool ValidarLogin(string nome, string senha)
-        {   
-            bool usuarioValido=false;
+        {
+            bool usuarioValido = false;
             //Conecta no banco
-            using(var banco = new ComandaDBContest())
+            using (var banco = new ComandaDBContest())
             {   //CONSULTA A TABELA USUARIO
                 var usuario = banco.Usuarios.FirstOrDefault(u => u.Email == nome.ToLower() && u.Senha == senha);
-                
-                if (usuario is not null) 
-                usuarioValido = true;
+
+                if (usuario is not null)
+                    usuarioValido = true;
             }
 
-            
+
             if (usuarioValido)
             {
                 return true;
@@ -75,10 +75,15 @@ namespace SenacFoods
 
         private void txtSENHA_Leave(object sender, EventArgs e)
         {
-            if(txtSENHA.Text == String.Empty)
+            if (txtSENHA.Text == String.Empty)
             {
                 txtSENHA.Text = "SENHA";
             }
+        }
+
+        private void txtLOGIN_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

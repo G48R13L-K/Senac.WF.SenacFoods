@@ -30,8 +30,9 @@ namespace SenacFoods
 
         private void SalvarCardapio()
         {
-                //conectar
-                using (var banco = new ComandaDBContest()) {
+            //conectar
+            using (var banco = new ComandaDBContest())
+            {
 
                 //captar os dados da tela
                 string titulo = txtTitulo.Text;
@@ -40,7 +41,8 @@ namespace SenacFoods
                 bool possuiPreparo = chkPossuiPreparo.Checked;
 
                 //criar um novo item cardapio
-                var cardapio = new CardapioItem() {
+                var cardapio = new CardapioItem()
+                {
                     Descricao = descricao,
                     Titulo = titulo,
                     Preco = preco,
@@ -49,12 +51,17 @@ namespace SenacFoods
 
                 //adiciona o cardapio
                 banco.CardapioItems.Add(cardapio);
-                
+
                 //salva as alterações
                 banco.SaveChanges();
-        }
+            }
             MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso",
             MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -91,6 +91,7 @@ namespace SenacFoods
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "X Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvar
             // 
