@@ -53,6 +53,10 @@ namespace SenacFoods
             FrmPedidoCozinha.ShowDialog();
         }
 
-       
+        private void btnMesas_Click(object sender, EventArgs e)
+        {
+            var FrmMesa = new FrmMesas();
+            FrmMesa.ShowDialog();
+        }
     }
 }

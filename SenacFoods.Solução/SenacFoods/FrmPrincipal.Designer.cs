@@ -36,11 +36,13 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
+            btnMesas = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnMesas);
             groupBox1.Controls.Add(btnUSUARIOS);
             groupBox1.Controls.Add(btnPEDIDO);
             groupBox1.Controls.Add(btnCOMANDA);
@@ -48,7 +50,7 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(63, 122);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(872, 304);
+            groupBox1.Size = new Size(872, 358);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
@@ -153,6 +155,21 @@
             lblMensagem.TabIndex = 0;
             lblMensagem.Text = "lblMensagem";
             // 
+            // btnMesas
+            // 
+            btnMesas.BackColor = Color.DarkGreen;
+            btnMesas.FlatAppearance.BorderSize = 0;
+            btnMesas.FlatStyle = FlatStyle.Flat;
+            btnMesas.Font = new Font("MV Boli", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMesas.ForeColor = Color.Black;
+            btnMesas.Location = new Point(286, 272);
+            btnMesas.Name = "btnMesas";
+            btnMesas.Size = new Size(291, 48);
+            btnMesas.TabIndex = 5;
+            btnMesas.Text = "Mesas";
+            btnMesas.UseVisualStyleBackColor = false;
+            btnMesas.Click += btnMesas_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -182,5 +199,6 @@
         private Button btnFechar;
         private Button btnMinimizar;
         private Label lblMensagem;
+        private Button btnMesas;
     }
 }
