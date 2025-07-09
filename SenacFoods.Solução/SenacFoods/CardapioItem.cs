@@ -21,5 +21,12 @@ namespace SenacFoods
         public decimal Preco { get; set; }
 
         public bool PossuiPreparo { get; set; }
+
+        internal void ShowDialog()
+        {
+            throw new NotImplementedException();
+        }
+
+      
     }   
 }

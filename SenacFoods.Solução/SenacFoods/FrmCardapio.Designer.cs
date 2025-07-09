@@ -1,4 +1,5 @@
-﻿namespace SenacFoods
+﻿
+namespace SenacFoods
 {
     partial class FrmCardapio
     {
@@ -28,9 +29,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btnFechar = new Button();
             panel1 = new Panel();
             txtPesquisa = new TextBox();
@@ -38,8 +39,8 @@
             groupBox1 = new GroupBox();
             btnMaisItems = new Button();
             dataGridView1 = new DataGridView();
-            Editar = new Button();
-            Excluir = new Button();
+            btnEditar = new Button();
+            btnExcluir = new Button();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -95,8 +96,8 @@
             // 
             groupBox1.Controls.Add(btnMaisItems);
             groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Controls.Add(Editar);
-            groupBox1.Controls.Add(Excluir);
+            groupBox1.Controls.Add(btnEditar);
+            groupBox1.Controls.Add(btnExcluir);
             groupBox1.ForeColor = SystemColors.Control;
             groupBox1.Location = new Point(3, 84);
             groupBox1.Name = "groupBox1";
@@ -123,65 +124,69 @@
             // 
             dataGridView1.AccessibleRole = AccessibleRole.None;
             dataGridView1.AllowDrop = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.Gray;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.Gray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.BackgroundColor = Color.Silver;
             dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.LightGray;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.LightGray;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = Color.Gray;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.Control;
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.Gray;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.Location = new Point(23, 76);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(906, 348);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellClick += dataGridView1_CellClick_1;
             // 
-            // Editar
+            // btnEditar
             // 
-            Editar.BackColor = Color.YellowGreen;
-            Editar.FlatAppearance.BorderSize = 0;
-            Editar.FlatStyle = FlatStyle.Flat;
-            Editar.ForeColor = SystemColors.ActiveCaptionText;
-            Editar.Location = new Point(811, 430);
-            Editar.Name = "Editar";
-            Editar.Size = new Size(118, 39);
-            Editar.TabIndex = 3;
-            Editar.Text = "# Editar";
-            Editar.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.YellowGreen;
+            btnEditar.Enabled = false;
+            btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.ForeColor = SystemColors.ActiveCaptionText;
+            btnEditar.Location = new Point(811, 430);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(118, 39);
+            btnEditar.TabIndex = 3;
+            btnEditar.Text = "# Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // Excluir
+            // btnExcluir
             // 
-            Excluir.BackColor = Color.DarkRed;
-            Excluir.FlatAppearance.BorderSize = 0;
-            Excluir.FlatStyle = FlatStyle.Flat;
-            Excluir.ForeColor = Color.Black;
-            Excluir.Location = new Point(687, 430);
-            Excluir.Name = "Excluir";
-            Excluir.Size = new Size(118, 39);
-            Excluir.TabIndex = 2;
-            Excluir.Text = "X Excluir";
-            Excluir.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.DarkRed;
+            btnExcluir.FlatAppearance.BorderSize = 0;
+            btnExcluir.FlatStyle = FlatStyle.Flat;
+            btnExcluir.ForeColor = Color.Black;
+            btnExcluir.Location = new Point(687, 430);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(118, 39);
+            btnExcluir.TabIndex = 2;
+            btnExcluir.Text = "X Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // FrmCardapio
             // 
@@ -203,14 +208,19 @@
             ResumeLayout(false);
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private Button btnFechar;
         private Panel panel1;
         private Label label1;
         private GroupBox groupBox1;
-        private Button Editar;
-        private Button Excluir;
+        private Button btnEditar;
+        private Button btnExcluir;
         private TextBox txtPesquisa;
         private DataGridView dataGridView1;
         private Button btnMaisItems;
