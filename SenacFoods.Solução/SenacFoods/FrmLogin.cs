@@ -9,11 +9,11 @@ namespace SenacFoods
 
         private void btnENTRADA_Click(object sender, EventArgs e)
         {
-            bool loginValido = ValidarLogin(txtLOGIN.Text, txtSENHA.Text);
+            bool loginValido = ValidarLogin(txtUsuario.Text, txtSENHA.Text);
             if (loginValido)
             {
                 this.Hide();
-                var FrmPrincipal = new FrmPrincipal(txtLOGIN.Text, txtSENHA.Text);
+                var FrmPrincipal = new FrmPrincipal(txtUsuario.Text, txtSENHA.Text);
                 FrmPrincipal.Show();
             }
         }
@@ -48,20 +48,20 @@ namespace SenacFoods
             Application.Exit();
         }
 
-        private void txtLOGIN_Enter(object sender, EventArgs e)
+        private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtLOGIN.Text == "USUÁRIO")
+            if (txtUsuario.Text == "USUÁRIO")
             {
-                txtLOGIN.Text = String.Empty;
+                txtUsuario.Text = String.Empty;
 
             }
         }
 
-        private void txtLOGIN_Leave(object sender, EventArgs e)
+        private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtLOGIN.Text == String.Empty)
+            if (txtUsuario.Text == String.Empty)
             {
-                txtLOGIN.Text = "USUÁRIOS";
+                txtUsuario.Text = "USUÁRIO";
             }
         }
 
@@ -81,7 +81,7 @@ namespace SenacFoods
             }
         }
 
-        private void txtLOGIN_TextChanged(object sender, EventArgs e)
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }

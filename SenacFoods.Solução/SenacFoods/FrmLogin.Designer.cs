@@ -28,31 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             panel1 = new Panel();
             panel2 = new Panel();
             btnFechar = new Button();
             btnENTRADA = new Button();
-            txtLOGIN = new TextBox();
+            txtUsuario = new TextBox();
             txtSENHA = new TextBox();
             label3 = new Label();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(65, 141);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 25);
-            label1.TabIndex = 0;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Gray;
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -63,7 +57,7 @@
             // 
             panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnENTRADA);
-            panel2.Controls.Add(txtLOGIN);
+            panel2.Controls.Add(txtUsuario);
             panel2.Controls.Add(txtSENHA);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
@@ -104,20 +98,20 @@
             btnENTRADA.UseVisualStyleBackColor = true;
             btnENTRADA.Click += btnENTRADA_Click;
             // 
-            // txtLOGIN
+            // txtUsuario
             // 
-            txtLOGIN.BackColor = Color.Black;
-            txtLOGIN.BorderStyle = BorderStyle.None;
-            txtLOGIN.Font = new Font("MS UI Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLOGIN.ForeColor = Color.White;
-            txtLOGIN.Location = new Point(69, 186);
-            txtLOGIN.Name = "txtLOGIN";
-            txtLOGIN.Size = new Size(502, 28);
-            txtLOGIN.TabIndex = 1;
-            txtLOGIN.Text = "USUÁRIO";
-            txtLOGIN.TextChanged += txtLOGIN_TextChanged;
-            txtLOGIN.Enter += txtLOGIN_Enter;
-            txtLOGIN.Leave += txtLOGIN_Leave;
+            txtUsuario.BackColor = Color.Black;
+            txtUsuario.BorderStyle = BorderStyle.None;
+            txtUsuario.Font = new Font("MS UI Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.ForeColor = Color.White;
+            txtUsuario.Location = new Point(69, 186);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(502, 28);
+            txtUsuario.TabIndex = 1;
+            txtUsuario.Text = "USUÁRIO";
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
+            txtUsuario.Enter += txtUsuario_Enter;
+            txtUsuario.Leave += txtUsuario_Leave;
             // 
             // txtSENHA
             // 
@@ -155,6 +149,18 @@
             label2.TabIndex = 2;
             label2.Text = "__________________________________________";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
+            pictureBox1.Location = new Point(3, 175);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(249, 205);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -169,22 +175,21 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLogin";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Label label1;
         private Panel panel1;
         private Panel panel2;
         private TextBox txtSENHA;
-        private TextBox txtLOGIN;
+        private TextBox txtUsuario;
         private Label label2;
         private Label label3;
         private Button btnENTRADA;
         private Button btnFechar;
+        private PictureBox pictureBox1;
     }
 }

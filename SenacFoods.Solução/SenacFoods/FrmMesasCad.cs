@@ -1,17 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SenacFoods
+﻿namespace SenacFoods
 {
     public partial class FrmMesasCad : Form
     {
+        private Mesa _mesaSelecionada;
+
+        public FrmMesasCad(Mesa mesaSelecionada)
+        {
+            _mesaSelecionada = mesaSelecionada;
+            InitializeComponent();
+
+            carregarDadosTela();
+        }
+
+        private void carregarDadosTela()
+        {
+            //Popular os campos de texto e checkbox
+            if (_mesaSelecionada != null)
+            {
+                txtNumeroMesa.Text = _mesaSelecionada.NumeroMesa.ToString();
+
+            }
+        }
+
+
         public FrmMesasCad()
         {
             InitializeComponent();
@@ -23,11 +34,41 @@ namespace SenacFoods
         }
 
         private void btnSalvar_Click_1(object sender, EventArgs e)
-        {
-            SalvarMesas();
+        {//inserir
+            if (_mesaSelecionada == null)
+            {
+                InserirMesa();
+            }
+            //atualizar
+            else
+            {
+                AtualizarCardapio();
+            }
+
         }
 
-        private void SalvarMesas()
+
+        private void AtualizarCardapio()
+        {
+            using (var banco = new ComandaDBContest())
+            {   //Capta as informações
+                int.TryParse(txtNumeroMesa.Text, out int numeroMesa);
+
+                //Atualiza as informações
+                var mesa = banco.Mesas.First(x => x.Id == _mesaSelecionada.Id);
+                mesa.NumeroMesa = numeroMesa;
+
+                //Salva as informações
+                banco.Mesas.Update(mesa);
+                banco.SaveChanges();
+
+                MessageBox.Show("Mesa salva com sucesso!", "Sucesso",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
+
+        private void InserirMesa()
         {
             //conectar
             using (var banco = new ComandaDBContest())
@@ -55,10 +96,7 @@ namespace SenacFoods
             this.Close();
         }
 
-        private void txtNumeroMesa_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
