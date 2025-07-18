@@ -58,5 +58,11 @@ namespace SenacFoods
             var FrmMesa = new FrmMesas();
             FrmMesa.ShowDialog();
         }
+
+        private void btnUSUARIOS_Click(object sender, EventArgs e)
+        {
+            var FrmUsuario = new FrmUsuario();
+            FrmUsuario.ShowDialog();
+        }
     }
 }

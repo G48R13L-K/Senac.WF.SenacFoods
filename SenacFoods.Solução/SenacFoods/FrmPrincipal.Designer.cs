@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnMesas = new Button();
             btnUSUARIOS = new Button();
             btnPEDIDO = new Button();
             btnCOMANDA = new Button();
@@ -36,7 +37,6 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
-            btnMesas = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,6 +55,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
             // 
+            // btnMesas
+            // 
+            btnMesas.BackColor = Color.DarkGreen;
+            btnMesas.FlatAppearance.BorderSize = 0;
+            btnMesas.FlatStyle = FlatStyle.Flat;
+            btnMesas.Font = new Font("MV Boli", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMesas.ForeColor = Color.Black;
+            btnMesas.Location = new Point(286, 272);
+            btnMesas.Name = "btnMesas";
+            btnMesas.Size = new Size(291, 48);
+            btnMesas.TabIndex = 5;
+            btnMesas.Text = "Mesas";
+            btnMesas.UseVisualStyleBackColor = false;
+            btnMesas.Click += btnMesas_Click;
+            // 
             // btnUSUARIOS
             // 
             btnUSUARIOS.BackColor = Color.LightPink;
@@ -68,6 +83,7 @@
             btnUSUARIOS.TabIndex = 4;
             btnUSUARIOS.Text = "Usuários";
             btnUSUARIOS.UseVisualStyleBackColor = false;
+            btnUSUARIOS.Click += btnUSUARIOS_Click;
             // 
             // btnPEDIDO
             // 
@@ -154,21 +170,6 @@
             lblMensagem.Size = new Size(178, 37);
             lblMensagem.TabIndex = 0;
             lblMensagem.Text = "lblMensagem";
-            // 
-            // btnMesas
-            // 
-            btnMesas.BackColor = Color.DarkGreen;
-            btnMesas.FlatAppearance.BorderSize = 0;
-            btnMesas.FlatStyle = FlatStyle.Flat;
-            btnMesas.Font = new Font("MV Boli", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMesas.ForeColor = Color.Black;
-            btnMesas.Location = new Point(286, 272);
-            btnMesas.Name = "btnMesas";
-            btnMesas.Size = new Size(291, 48);
-            btnMesas.TabIndex = 5;
-            btnMesas.Text = "Mesas";
-            btnMesas.UseVisualStyleBackColor = false;
-            btnMesas.Click += btnMesas_Click;
             // 
             // FrmPrincipal
             // 
