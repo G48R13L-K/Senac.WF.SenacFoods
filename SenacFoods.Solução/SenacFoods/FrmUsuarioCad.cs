@@ -104,7 +104,7 @@ namespace SenacFoods
                 string Email = TxtEmail.Text;
                 string senha = MskSenha.Text;
                 bool usuarioAtivo = chkUsuarioAtivo.Checked;
-                
+
 
                 //criar um novo item cardapio
                 var usuario = new Usuario()
@@ -113,19 +113,48 @@ namespace SenacFoods
                     Email = Email,
                     Senha = senha,
                     Ativo = usuarioAtivo,
-                   
+
+
 
                 };
+                if (nomeUsuario != null)
+                {
+                    if (Email != null)
+                    {
 
-                //adiciona o cardapio
-                banco.Usuarios.Add(usuario);
+                        if (MskSenha.Text == MskConfirmacaoSenha.Text)
+                        {
+                            if (MskSenha.Text.Length >= 6)
+                            {
 
-                //salva as alterações
-                banco.SaveChanges();
+                                //Salva as informações
+                                banco.Usuarios.Add(usuario);
+                                banco.SaveChanges();
+
+                                MessageBox.Show("Usuário salvo com sucesso!", "Sucesso",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("A senha precisam ter mais de 6 digitos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("As senhas precisam ser iguais.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Email não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Nome do usuário não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            MessageBox.Show("Usuário salvo com sucesso!", "Sucesso",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
