@@ -19,5 +19,7 @@ public class Usuario
 
     public bool Ativo {  get; set; }
 
+    public string Perfil { get; set; }
+
    
 }

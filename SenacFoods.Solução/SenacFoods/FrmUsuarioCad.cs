@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,7 @@ namespace SenacFoods
                 TxtEmail.Text = _usuario.Email;
                 MskSenha.Text = _usuario.Senha;
                 chkUsuarioAtivo.Checked = _usuario.Ativo;
+                comboPerfil.Text = _usuario.Perfil;
             }
 
         }
@@ -71,12 +73,42 @@ namespace SenacFoods
                 string Email = TxtEmail.Text;
                 string senha = MskSenha.Text;
                 bool usuarioAtivo = chkUsuarioAtivo.Checked;
+                string Perfil = comboPerfil.Text;
+
+
+
+                if (string.IsNullOrEmpty(nomeUsuario))
+                {
+                    MessageBox.Show("Nome do usuário não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(Email))
+                {
+                    MessageBox.Show("Email não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (MskSenha.Text != MskConfirmacaoSenha.Text)
+                {
+                    MessageBox.Show("As senhas precisam ser iguais.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (MskSenha.Text.Length < 5)
+                {
+                    MessageBox.Show("A senha precisam ter mais de 5 digitos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
                 //Atualiza as informações
                 var usuario = banco.Usuarios.First(x => x.Id == _usuario.Id);
                 usuario.Nome = nomeUsuario;
                 usuario.Email = Email;
                 usuario.Senha = senha;
                 usuario.Ativo = usuarioAtivo;
+                usuario.Perfil = Perfil;
                 if (MskSenha.Text == MskConfirmacaoSenha.Text)
                 {
                     //Salva as informações
@@ -104,6 +136,31 @@ namespace SenacFoods
                 string Email = TxtEmail.Text;
                 string senha = MskSenha.Text;
                 bool usuarioAtivo = chkUsuarioAtivo.Checked;
+                string perfil = comboPerfil.Text;
+
+                if (string.IsNullOrEmpty(nomeUsuario))
+                {
+                    MessageBox.Show("Nome do usuário não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(Email))
+                {
+                    MessageBox.Show("Email não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (MskSenha.Text != MskConfirmacaoSenha.Text)
+                {
+                    MessageBox.Show("As senhas precisam ser iguais.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (MskSenha.Text.Length < 5)
+                {
+                    MessageBox.Show("A senha precisam ter mais de 5 digitos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
 
                 //criar um novo item cardapio
@@ -113,49 +170,29 @@ namespace SenacFoods
                     Email = Email,
                     Senha = senha,
                     Ativo = usuarioAtivo,
-
-
-
+                    Perfil = perfil
                 };
-                if (nomeUsuario != null)
-                {
-                    if (Email != null)
-                    {
 
-                        if (MskSenha.Text == MskConfirmacaoSenha.Text)
-                        {
-                            if (MskSenha.Text.Length >= 6)
-                            {
 
-                                //Salva as informações
-                                banco.Usuarios.Add(usuario);
-                                banco.SaveChanges();
 
-                                MessageBox.Show("Usuário salvo com sucesso!", "Sucesso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("A senha precisam ter mais de 6 digitos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("As senhas precisam ser iguais.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Email não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Nome do usuário não pode ser nulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //Salva as informações
+                banco.Usuarios.Add(usuario);
+                banco.SaveChanges();
+
+                MessageBox.Show("Usuário salvo com sucesso!", "Sucesso",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
+                           
+                            
+                        
+
         }
+                    
+                    
+                
+            
+        
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

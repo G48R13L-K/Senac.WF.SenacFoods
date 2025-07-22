@@ -148,6 +148,8 @@
             btnEditar.BackColor = Color.YellowGreen;
             btnEditar.Enabled = false;
             btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatAppearance.MouseDownBackColor = Color.YellowGreen;
+            btnEditar.FlatAppearance.MouseOverBackColor = Color.YellowGreen;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = SystemColors.ActiveCaptionText;
             btnEditar.Location = new Point(811, 430);

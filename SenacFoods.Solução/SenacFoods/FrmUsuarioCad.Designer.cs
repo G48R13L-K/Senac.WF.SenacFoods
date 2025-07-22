@@ -93,12 +93,11 @@
             // comboPerfil
             // 
             comboPerfil.FormattingEnabled = true;
-            comboPerfil.Items.AddRange(new object[] { "Administrador", "Operador" });
+            comboPerfil.Items.AddRange(new object[] { "Administrador", "Gerente", "Garçom", "Cheff", "Caixa" });
             comboPerfil.Location = new Point(46, 308);
             comboPerfil.Name = "comboPerfil";
             comboPerfil.Size = new Size(201, 33);
             comboPerfil.TabIndex = 17;
-           
             // 
             // label4
             // 
