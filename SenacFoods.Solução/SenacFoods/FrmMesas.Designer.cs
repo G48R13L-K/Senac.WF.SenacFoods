@@ -92,7 +92,7 @@
             // 
             // btnMaisMeasas
             // 
-            btnMaisMeasas.BackColor = Color.DarkGreen;
+            btnMaisMeasas.BackColor = Color.CadetBlue;
             btnMaisMeasas.FlatAppearance.BorderSize = 0;
             btnMaisMeasas.FlatStyle = FlatStyle.Flat;
             btnMaisMeasas.ForeColor = SystemColors.ActiveCaptionText;
@@ -145,8 +145,10 @@
             // 
             // btnEditar
             // 
-            btnEditar.BackColor = Color.YellowGreen;
+            btnEditar.BackColor = Color.ForestGreen;
             btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatAppearance.MouseDownBackColor = Color.ForestGreen;
+            btnEditar.FlatAppearance.MouseOverBackColor = Color.ForestGreen;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = SystemColors.ActiveCaptionText;
             btnEditar.Location = new Point(811, 430);

@@ -92,7 +92,7 @@
             // 
             // btnMaisItems
             // 
-            btnMaisItems.BackColor = Color.DarkGreen;
+            btnMaisItems.BackColor = Color.CadetBlue;
             btnMaisItems.FlatAppearance.BorderSize = 0;
             btnMaisItems.FlatStyle = FlatStyle.Flat;
             btnMaisItems.ForeColor = SystemColors.ActiveCaptionText;
@@ -145,11 +145,11 @@
             // 
             // btnEditar
             // 
-            btnEditar.BackColor = Color.YellowGreen;
+            btnEditar.BackColor = Color.ForestGreen;
             btnEditar.Enabled = false;
             btnEditar.FlatAppearance.BorderSize = 0;
-            btnEditar.FlatAppearance.MouseDownBackColor = Color.YellowGreen;
-            btnEditar.FlatAppearance.MouseOverBackColor = Color.YellowGreen;
+            btnEditar.FlatAppearance.MouseDownBackColor = Color.ForestGreen;
+            btnEditar.FlatAppearance.MouseOverBackColor = Color.ForestGreen;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.ForeColor = SystemColors.ActiveCaptionText;
             btnEditar.Location = new Point(811, 430);

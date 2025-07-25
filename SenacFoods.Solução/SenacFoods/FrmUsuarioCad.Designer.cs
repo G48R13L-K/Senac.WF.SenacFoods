@@ -222,7 +222,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SkyBlue;
+            BackColor = Color.LightPink;
             ClientSize = new Size(717, 523);
             Controls.Add(btnFechar);
             Controls.Add(label6);
