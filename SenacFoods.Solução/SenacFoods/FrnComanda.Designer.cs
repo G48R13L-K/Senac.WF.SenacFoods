@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             panel1 = new Panel();
             txtPesquisa = new TextBox();
             label1 = new Label();
@@ -61,7 +61,7 @@
             // 
             txtPesquisa.Location = new Point(150, 36);
             txtPesquisa.Name = "txtPesquisa";
-            txtPesquisa.Size = new Size(745, 31);
+            txtPesquisa.Size = new Size(703, 31);
             txtPesquisa.TabIndex = 0;
             // 
             // label1
@@ -91,49 +91,49 @@
             // 
             // btnMaisItems
             // 
-            btnMaisItems.BackColor = Color.DarkGreen;
+            btnMaisItems.BackColor = Color.YellowGreen;
             btnMaisItems.FlatAppearance.BorderSize = 0;
             btnMaisItems.FlatStyle = FlatStyle.Flat;
             btnMaisItems.ForeColor = SystemColors.ActiveCaptionText;
             btnMaisItems.Location = new Point(23, 31);
             btnMaisItems.Name = "btnMaisItems";
-            btnMaisItems.Size = new Size(118, 39);
+            btnMaisItems.Size = new Size(178, 39);
             btnMaisItems.TabIndex = 1;
-            btnMaisItems.Text = "+ Item";
+            btnMaisItems.Text = "Nova comanda";
             btnMaisItems.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
             dataGridView1.AccessibleRole = AccessibleRole.None;
             dataGridView1.AllowDrop = true;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.Gray;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = Color.Gray;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            dataGridViewCellStyle7.NullValue = null;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
+            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.BackgroundColor = Color.Silver;
             dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.LightGray;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = Color.LightGray;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = Color.Gray;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.Control;
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = Color.Gray;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle9.NullValue = null;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             dataGridView1.Location = new Point(23, 76);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
@@ -142,7 +142,7 @@
             // 
             // btnEditar
             // 
-            btnEditar.BackColor = Color.YellowGreen;
+            btnEditar.BackColor = Color.DarkGreen;
             btnEditar.Enabled = false;
             btnEditar.FlatAppearance.BorderSize = 0;
             btnEditar.FlatStyle = FlatStyle.Flat;
